@@ -12,7 +12,7 @@ Before running the code, make sure you have the following prerequisites:
 
  * clone source code
 ```
-    git clone https://github.com/.git
+    git clone https://github.com/g5471z/CSMS.git
 ```
 
 The process requires Linux and Python 3.6 or higher. It also requires installing PyTorch version 1.3 or higher. Its other dependencies are listed in requirements.txt. CUDA is strongly recommended for speed, but not necessary.
