@@ -18,7 +18,7 @@ Before running the code, make sure you have the following prerequisites:
 The process requires Linux and Python 3.6 or higher. It also requires installing PyTorch version 1.3 or higher. Its other dependencies are listed in requirements.txt. CUDA is strongly recommended for speed, but not necessary.
 
 ### (3) preprocess data
-1)Prepare the dataset with _jsonl_ format.In the experiment, we used **ClassSum** dataset and **HRCE** dataset.
+1)Prepare the dataset with _jsonl_ format.In the experiment, we used **ClassSum** dataset and **HRCE** dataset.The **ClassSum** dataset is available from the website https://github.com/classsum/ClassSum .The **HRCE** dataset is available from the website https://github.com/Haohaoi123/HRCE .
 
 2)Run the `jsonl2text.py` file located at `data/java/read_json/`.You will get the dataset file in _txt_ format.Remember to modify the path of input data.
 
