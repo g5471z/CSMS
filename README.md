@@ -100,3 +100,7 @@ $ bash generate.sh 0 code2jdoc input_file_name
 
 The above command will generate `tmp/code2jdoc_beam.json` file that will contain the predicted summaries.
 
+## Acknowledgement
+
+We borrowed and modified code from [NeuralCodeSum](https://github.com/wasiahmad/NeuralCodeSum). We would like to expresse our gratitdue for the authors of this repository.
+
