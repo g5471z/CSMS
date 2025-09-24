@@ -1,5 +1,9 @@
 # CSMS
-CSMS is our proposed class code summary model based on Transformer, which integrates method summary information to encode and decode.The work is completed based on [NeuralCodeSum](https://github.com/wasiahmad/NeuralCodeSum). We incorporated class code method summary sequences into the original work's code and added processing units for these sequences within the model. This enables parameter sharing within the encoder and joint decoding by the decoder.
+CSMS is our proposed class code summary model based on Transformer, which integrates method summary information to encode and decode.The work is completed based on [NeuralCodeSum](https://github.com/wasiahmad/NeuralCodeSum). NeuralCodeSum: Uddin Ahmad W., Chakraborty S., Ray B.,et al., "A Transformer-based approach for source code summarization," in Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics,2020, pp.4998--5007. (https://github.com/wasiahmad/NeuralCodeSum)
+
+We incorporated class code method summary sequences into the original work's code and added processing units for these sequences within the model. This enables parameter sharing within the encoder and joint decoding by the decoder.
+
+
 
 ## Before training
 
