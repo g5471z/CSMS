@@ -145,7 +145,7 @@ class MultiHeadedAttention(nn.Module):
                         dim=2)
                 layer_cache["self_keys"] = key
                 layer_cache["self_values"] = value
-
+            # changed : handling for different types of multi-head attention
             elif attn_type == "context":
                 query = shape(self.query(query), self.d_k)
                 if layer_cache["memory_keys"] is None:
@@ -156,7 +156,7 @@ class MultiHeadedAttention(nn.Module):
                                  layer_cache["memory_values"]
                 layer_cache["memory_keys"] = key
                 layer_cache["memory_values"] = value
-                
+
             elif attn_type == "ast":
                 query = shape(self.query(query), self.d_k)
                 if layer_cache["ast_keys"] is None:

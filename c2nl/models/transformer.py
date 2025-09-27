@@ -119,7 +119,8 @@ class Embedder(nn.Module):
                     pos_enc = pos_enc.cuda()
                 pos_rep = self.src_pos_embeddings(pos_enc)
                 word_rep = word_rep + pos_rep
-            
+
+            # changed ：embedding processing for ast_sequence
             if self.use_ast_node:
                 ast_rep = self.ast_node_embeddings(ast_sequence.unsqueeze(2))
                 ast_pos_enc = torch.arange(start=0,
@@ -451,7 +452,8 @@ class Transformer(nn.Module):
 #         code_rep = input_emb1.permute(0, 2, 3, 1).contiguous().view(-1, len // 2, self.embedder.enc_input_size)
 
         code_rep, code_len = self.convolution(code_rep, code_len)
-        
+
+        # changed：implementation for the shared encoder
         memory_bank, layer_wise_outputs = self.encoder(code_rep, code_len)  # B x seq_len x h
         
         ast_memory, ast_layer_wise_outputs = self.encoder(ast_rep, ast_len)
