@@ -14,7 +14,7 @@ Before running the code, make sure you have the following prerequisites:
 
  * source code
 ```
-    git
+    git clone https://github.com/g5471z/CSMS.git
 ```
 The non-anonymous link to support repository cloning will be modified when time permits.
 
