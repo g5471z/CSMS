@@ -91,6 +91,7 @@ class TransformerDecoderLayer(nn.Module):
                                      attn_type="self")
         query_norm = self.layer_norm(self.drop(query) + inputs)
 
+        # changed : Source Code Self-Attention
         mid, attn, coverage = self.context_attn(memory_bank,
                                                 memory_bank,
                                                 query_norm,
@@ -101,6 +102,7 @@ class TransformerDecoderLayer(nn.Module):
                                                 coverage=coverage)
         mid_norm = self.layer_norm_1(self.drop(mid) + query_norm)
 
+        # changed : Method Summary Self-Attention
         mid, attn, coverage = self.ast_attn(ast_memory,
                                             ast_memory,
                                             mid_norm,

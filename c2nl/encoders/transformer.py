@@ -97,6 +97,7 @@ class TransformerEncoderLayer(nn.Module):
                                                        mask=mask, attn_type="self")
             out = self.layer_norm(self.dropout(context) + inputs)
         else:
+            # changed : Cross-Attention
             context, attn_per_head, _ = self.attention(inputs, inputs, inputs1,
                                                        mask=mask, attn_type="self")
             out = self.layer_norm(self.dropout(context) + inputs1)
